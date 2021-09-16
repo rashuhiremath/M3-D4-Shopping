@@ -61,17 +61,13 @@ In the detail page, show the details of the book matching the ASIN in the query 
                       <h5 class="card-title">${element.title}</h5>
                             <p class="card-text">${element.price}€</p>
                         <a href="#" id="add" class="btn btn-primary">Add Cart</a>
-                        <a href="#" class="btn btn-primary button">Skip</a>
+                        <a href="#" class="btn btn-primary ">Skip</a>
                         </div>
                             </div>`
 
                         row.appendChild(col)
 
-                        const hidding =document.querySelectorAll(".btn .btn-primary .button")
-                        .forEach(btn => {
-                            btn.innerText = "Hide"
-                            btn.onclick = (event) => event.currentTarget.closest(".col").remove()
-                        })
+                        /*   */
 
                         
                     })
@@ -82,6 +78,11 @@ In the detail page, show the details of the book matching the ASIN in the query 
         }
         window.onload = ()=>{
             shoppingCart()
+            row.document.querySelectorAll(".btn .btn-primary:nth-child(2)")
+                        .forEach(btn => {
+                            btn.innerText = "Hide"
+                            btn.onclick = (event) => event.currentTarget.closest(".col").remove()
+                        })  
         }
     </script>
     
